@@ -1,0 +1,3 @@
+CREATE DATABASE nftparent;
+CREATE USER nftpadmin WITH PASSWORD 'nfta';
+GRANT ALL PRIVILEGES ON DATABASE nftparent TO nftpadmin;
