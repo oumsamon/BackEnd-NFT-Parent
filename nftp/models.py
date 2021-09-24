@@ -26,7 +26,7 @@ class BottleNipple(models.Model):
         return self.name
 
 class DiaperComment(models.Model):
-    name = models.ForeignKey(Diaper, on_delete=models.CASCADE, related_name='DiaperComments')
+    diapername = models.ForeignKey(Diaper, on_delete=models.CASCADE, related_name='DiaperComments')
     newparent = models.CharField(max_length=100)
     review = models.CharField(max_length=500)
 
@@ -34,7 +34,7 @@ class DiaperComment(models.Model):
         return self.newparent
 
 class BottleComment(models.Model):
-    name = models.ForeignKey(Bottle, on_delete=models.CASCADE, related_name='BottleComments')
+    bottlename = models.ForeignKey(Bottle, on_delete=models.CASCADE, related_name='BottleComments')
     newparent = models.CharField(max_length=100)
     review = models.CharField(max_length=500)
 
@@ -42,7 +42,7 @@ class BottleComment(models.Model):
         return self.newparent
 
 class BNComment(models.Model):
-    name = models.ForeignKey(BottleNipple, on_delete=models.CASCADE, related_name='BNComments')
+    bnipplename = models.ForeignKey(BottleNipple, on_delete=models.CASCADE, related_name='BNComments')
     newparent = models.CharField(max_length=100)
     review = models.CharField(max_length=500)
 
