@@ -12,6 +12,7 @@ urlpatterns = [
     path('bottlecomment/<int:pk>', views.BottleCommentDetail.as_view(), name='Bottle_Comment_detail'),
 
     path('bottlenipple/', views.BNList.as_view(), name='Bottle_Nipple_list'),
+    path('bottlenipple/<int:pk>', views.BNListDetail.as_view(), name='Bottle_Nipple_detail'),
     path('bncomment/', views.BNCommentList.as_view(), name='Bottle_Nipple_Comments_list'),
     path('bncomment/<int:pk>', views.BNCommentDetail.as_view(), name='Bottle_Nipple_Comment_detail'),
 ]

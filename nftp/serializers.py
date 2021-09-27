@@ -1,3 +1,4 @@
+from re import T
 from rest_framework import serializers
 from .models import Diaper, DiaperComment, Bottle, BottleComment, BNComment, BottleNipple
 
@@ -35,6 +36,7 @@ class BNCommentSerializers(serializers.ModelSerializer):
 
 class BottleNippleSerializers(serializers.ModelSerializer):
     BNComments = BNCommentSerializers
+    
     
     class Meta:
         model = BottleNipple

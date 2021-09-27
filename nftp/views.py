@@ -28,9 +28,6 @@ class BottleCommentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = BottleComment.objects.all()
     serializer_class = BottleCommentSerializers
 
-class BNList(generics.ListCreateAPIView):
-    queryset = BottleNipple.objects.all()
-    serializer_class = BottleNippleSerializers
 
 class BNCommentList(generics.ListCreateAPIView):
     queryset = BNComment.objects.all()
@@ -39,3 +36,11 @@ class BNCommentList(generics.ListCreateAPIView):
 class BNCommentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = BNComment.objects.all()
     serializer_class = BNCommentSerializers
+
+class BNList(generics.ListCreateAPIView):
+    queryset = BottleNipple.objects.all()
+    serializer_class = BottleNippleSerializers
+
+class BNListDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = BottleNipple.objects.all()
+    serializer_class = BottleNippleSerializers
