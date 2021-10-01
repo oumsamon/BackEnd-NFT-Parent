@@ -9,11 +9,11 @@ class DiaperCommentSerializers(serializers.ModelSerializer):
         fields = ('id', 'diapername', 'newparent', 'review')
 
 class DiaperSerializers(serializers.ModelSerializer):
-    DiaperComments = DiaperCommentSerializers
+    # DiaperComments = DiaperCommentSerializers
     
     class Meta:
         model = Diaper
-        fields = ('id', 'name', 'type', 'photo_url', 'DiaperComments')
+        fields = ('id', 'name', 'type', 'photo_url')
 
 class BottleCommentSerializers(serializers.ModelSerializer):
 

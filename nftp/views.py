@@ -8,6 +8,14 @@ class DiaperList(generics.ListCreateAPIView):
     queryset = Diaper.objects.all()
     serializer_class = DiaperSerializers
 
+class DiaperAdd(generics.ListCreateAPIView):
+    queryset = Diaper.objects.all()
+    serializer_class = DiaperSerializers
+
+class DiaperDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Diaper.objects.all()
+    serializer_class = DiaperSerializers
+
 class DiaperCommentList(generics.ListCreateAPIView):
     queryset = DiaperComment.objects.all()
     serializer_class = DiaperCommentSerializers
